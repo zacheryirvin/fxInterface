@@ -1,0 +1,63 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ToggleButton?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<!-- <BorderPane fx:controller="fxBuild.Controller" -->
+          <!-- xmlns:fx="http://javafx.com/fxml"> -->
+      <!-- <bottom> -->
+        <!-- <FlowPane hgap="10" style="-fx-border-color: red" alignment="center"> -->
+          <!-- <Button text="Button One" style="-fx-background-color: white"/> -->
+          <!-- <Button text="Button Two" /> -->
+          <!-- <Button text="A Really Long Button"/>  -->
+          <!-- <Button text="Button Five"/> -->
+          <!-- <Button text="Button Five"/> -->
+          <!-- <Button text="Button Five"/> -->
+          <!-- <Button text="Button Five"/> -->
+          <!-- <Button text="Button Five"/> -->
+          <!-- <Button text="Button Five"/> -->
+          <!-- <Button text="Button Five"/> -->
+        <!-- </FlowPane> -->
+      <!-- </bottom> -->
+<!-- </BorderPane> -->
+
+<!-- example of image import insertion -->
+<!-- <Button text="Image Example"> -->
+  <!-- <graphic> -->
+    <!-- <ImageView> -->
+      <!-- <Image url=""/> -->
+    <!-- </ImageView> -->
+  <!-- </graphic> -->
+<!-- </Button> -->
+
+<GridPane fx:controller="fxBuild.Controller"
+  xmlns:fx="http://javafx.com/fxml"
+  alignment="top_center" hgap="10" vgap="10"
+  >
+<Button text="Submit" GridPane.rowIndex="0" GridPane.columnIndex="0"
+  style="-fx-font-family: Times New Roman; -fx-font-size: 50px; -fx-font-weight: bold"
+  />
+  <Button text="Reset" prefWidth="90" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+  <Button text="Cancel" prefWidth="90" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+  <fx:define>
+    <ToggleGroup fx:id="exToggle"/>
+  </fx:define>
+  <RadioButton text="ROne" GridPane.rowIndex="3" GridPane.columnIndex="0" toggleGroup="$exToggle"/>
+  <RadioButton text="RTwo" GridPane.rowIndex="4" GridPane.columnIndex="0" toggleGroup="$exToggle" selected="true"/>
+  <RadioButton text="RThree" GridPane.rowIndex="5" GridPane.columnIndex="0" toggleGroup="$exToggle"/>
+</GridPane>
